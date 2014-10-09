@@ -9,8 +9,7 @@
         [Parameter(Position=0, Mandatory=$true, HelpMessage='Enter path with all scripts')]
         [Alias('InputPath')]
         [String]        
-        $strScriptPath,
-        
+        $strScriptPath,        
         
         [Parameter(Position=1, Mandatory=$true, HelpMessage='Enter path where doc gets stored')]
         [Alias('OutputPath')]
@@ -19,6 +18,8 @@
     )
 
     begin{
+
+        $arrScripts = Get-ChildItem $strScriptPath
     
     }
 
